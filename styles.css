@@ -1,0 +1,136 @@
+* {
+    box-sizing: border-box; /* Include padding and border in width/height */
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #e0f7fa; /* Light teal background */
+    color: #333; /* Dark text color */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; /* Ensure full viewport height */
+}
+
+.container {
+    text-align: center;
+    background-color: #fff; /* White background for the container */
+    padding: 20px;
+    border-radius: 12px; /* Rounded corners */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15); /* Soft shadow effect */
+    max-width: 500px; /* Increased max width for more space */
+    width: 90%; /* Responsive width */
+    overflow: hidden; /* Prevent overflow from child elements */
+}
+
+h1 {
+    font-size: 1.8em; /* Larger heading */
+    margin-bottom: 15px; /* Space below heading */
+    color: #00796b; /* Teal color for the heading */
+}
+
+h2, h3 {
+    font-size: 1.5em; /* Larger size for subheadings */
+    color: #004d40; /* Darker teal for contrast */
+}
+
+input, button {
+    padding: 12px; /* Increased padding for comfort */
+    margin: 10px 0; /* Space between elements */
+    border-radius: 6px; /* Slightly larger radius for a softer look */
+    border: 1px solid #ccc; /* Light border */
+    width: 100%; /* Full width */
+    font-size: 1em; /* Consistent font size */
+}
+
+button {
+    background-color: #00796b; /* Teal background for buttons */
+    color: white; /* White text color */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s ease; /* Smooth transition effect */
+}
+
+button:hover {
+    background-color: #004d40; /* Darker teal on hover */
+}
+
+#weather-result, #forecast, #search-history {
+    margin-top: 20px;
+    padding: 15px; /* Padding for results */
+    border: 1px solid #ccc; /* Light border around results */
+    border-radius: 6px; /* Rounded corners */
+    background-color: #f9f9f9; /* Light background for better contrast */
+}
+
+.forecast-day {
+    border-top: 1px solid #ddd; /* Divider for each forecast day */
+    padding: 10px 0; /* Vertical spacing */
+}
+
+.forecast-day:first-child {
+    border-top: none; /* Remove divider for the first item */
+}
+
+.forecast-day img {
+    width: 50px; /* Fixed width for icons */
+    height: auto; /* Maintain aspect ratio */
+}
+
+#search-history {
+    margin-top: 20px;
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    background-color: #f9f9f9;
+}
+
+#history-list {
+    list-style-type: none; /* Remove bullet points */
+    padding: 0; /* Remove padding */
+}
+
+#history-list li {
+    background-color: #e0f7fa; /* Light teal background for list items */
+    margin: 5px 0; /* Space between list items */
+    padding: 10px; /* Padding for list items */
+    border-radius: 4px; /* Rounded corners for items */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s ease; /* Smooth hover effect */
+}
+
+#history-list li:hover {
+    background-color: #b2ebf2; /* Darker teal on hover */
+}
+
+.clear-history {
+    margin-top: 10px; /* Space above the button */
+    padding: 10px 20px; /* Padding for button */
+    background-color: #ff5252; /* Red background for delete button */
+    color: white; /* White text color */
+    border: none; /* No border */
+    border-radius: 4px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor */
+    transition: background-color 0.3s ease; /* Smooth transition */
+}
+
+.clear-history:hover {
+    background-color: #c62828; /* Darker red on hover */
+}
+
+@media screen and (max-width: 600px) {
+    .container {
+        padding: 15px;
+        max-width: 95%; /* Ensure it doesn't overflow on smaller screens */
+    }
+    h1, h2, h3 {
+        font-size: 1.5em; /* Adjust heading size on small screens */
+    }
+    input, button {
+        padding: 10px; /* Smaller padding on smaller screens */
+    }
+    #weather-result, #forecast {
+        padding: 10px; /* Smaller padding */
+    }
+}
